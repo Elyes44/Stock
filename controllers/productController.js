@@ -42,11 +42,6 @@ export const deleteProduct = async (req, res) => {
 }
 
 export const updateProduct = async (req, res) => {
-    // if (!req.body) {
-    //     res.status(400).send({
-    //         message: "Data to update can not be empty!"
-    //     });
-    // }
     const id = req.params.id
     await produits.findByIdAndUpdate(id, req.body)
         .then((result) => {
