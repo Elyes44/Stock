@@ -1,5 +1,4 @@
-import express, { Router } from 'express';
-//import {produits} from '../../models/produits.js';
+import { Router } from 'express';
 import {
     createPost ,getallProducts,deleteProduct,updateProduct 
 } from '../controllers/productController.js';

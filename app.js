@@ -4,9 +4,8 @@ import dotenv from 'dotenv'
 import cors from "cors"
 import connectDB from './db/cnx.js'
 import roleRoute from './Routes/productRoute.js'
+import roleRoutes from './Routes/userRoute.js'
 
-// import mongoose from 'mongoose'
-// import produits from './models/produits.js'
 
 const app = express();
 dotenv.config();
@@ -19,8 +18,8 @@ const corsConfig = {
 
 app.use(cors(corsConfig));
 app.use(bodyParser.json());
-
 app.use('/', roleRoute())
+app.use('/', roleRoutes())
 app.listen(process.env.PORT, () => {
   console.log("info", `Server started on port ${process.env.PORT}`);
 });
