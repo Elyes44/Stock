@@ -8,7 +8,9 @@ import roleRoutes from './Routes/userRoute.js'
 
 
 const app = express();
+
 dotenv.config();
+
 connectDB();
 
 const corsConfig = {
