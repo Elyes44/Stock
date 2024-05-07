@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import {adduser,getallUsers,login,authenticateUser} from '../controllers/userController.js'
+import {adduser,getallUsers,login} from '../controllers/userController.js'
 import { isAuth } from '../middlewares/isAuth.js';
 
 
