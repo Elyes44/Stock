@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import Users from './users.js';
 const Schema = mongoose.Schema;
 const produit = new mongoose.Schema({
     nom_produit: String,
@@ -6,7 +7,8 @@ const produit = new mongoose.Schema({
     etat: {type: String, enum:["en_stock", "hors_stock"]},
     Marque: String,
     Prix: Number,
-    Description: String
+    Description: String,
+    user :{type :Schema.Types.ObjectId, ref: 'User'} 
 });
 const produits = mongoose.model("produitModel", produit);
  export default  produits
