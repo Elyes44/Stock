@@ -1,7 +1,7 @@
 import produits from "../models/produits.js";
 
 
-export const createPost = async (req, res) => {
+export const createProduct = async (req, res) => {
     const Produit = new produits(req.body);
     await Produit.save()
         .then(() => {

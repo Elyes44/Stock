@@ -15,6 +15,7 @@ export const adduser = async (req, res) => {
         name: req.body.username,
         password: hashpassword,
         email: email,
+        role : req.body.role
     })
     await NewUser.save()
         .then(() => {
